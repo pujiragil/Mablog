@@ -6,17 +6,19 @@ import { Icon } from "astro-icon"
   <div class="flex justify-between items-center">
     <Icon class="opacity-40 md:hidden" name="ion:menu-outline" width="24" height="24" />
 
-    <div class="flex items-center space-x-2.5 text-lg">
-      <span class="w-[35px] h-[35px] bg-[#4B5563] flex justify-center items-center rounded">M</span>
-      <h1>Mablog</h1>
-    </div>
+    <a href="/">
+      <div class="flex items-center space-x-2.5 text-lg">
+        <span class="w-[35px] h-[35px] bg-[#4B5563] flex justify-center items-center rounded">M</span>
+        <h1>Mablog</h1>
+      </div>
+    </a>
 
     <Icon class="opacity-40 md:hidden" name="ion:search-outline" width="24" height="24"/>    
   
     <ul class="hidden md:flex items-center justify-center space-x-11">
-      <li>UI Design</li>
-      <li>Front-end</li>
-      <li>Back-end</li>
+      <li><a href="#">UI Design</a></li>
+      <li><a href="#">Front-end</a></li>
+      <li><a href="#">Back-end</a></li>
       <li class="space-x-2">Lainnya <Icon class="inline-block" name="ion:chevron-down-outline" width="16" height="16"/></li>
     </ul>
 

@@ -1,29 +1,24 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro"
+import Navbar from "../components/Navbar.astro"
+import Card from "../components/Card.astro"
+
+const posts = await Astro.glob("../posts/*.md")
 ---
 
 <Layout title="Mablog">
 	<Navbar />
 
 	<div class="xl:container mx-auto px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-9">
-		<Card
-			imageProfile="/images/profile-1.png"
-			name="Siskaee"
-			specialist="UI Designer"
-		/>
-
-		<Card
-			imageProfile="/images/profile-1.png"
-			name="Siskaee"
-			specialist="UI Designer"
-		/>
-
-		<Card
-			imageProfile="/images/profile-1.png"
-			name="Siskaee"
-			specialist="UI Designer"
-		/>
+		{posts.map(post => (
+			<Card 
+				slug={post.frontmatter.slug}
+				title={post.frontmatter.title}
+				description={post.frontmatter.description}
+				thumbnail={post.frontmatter.thumbnail}
+				author={post.frontmatter.author}
+				published={post.frontmatter.published}
+				category={post.frontmatter.category}/>
+		))}
 	</div>
 </Layout>

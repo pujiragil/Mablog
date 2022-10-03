@@ -11,9 +11,11 @@ export interface Props {
     specialist: string;
   };
   thumbnail: string;
+  published: string;
+  category: string;
 }
 
-const { title, author, thumbnail } = Astro.props.frontmatter as Props || Astro.props as Props
+const { title, author, thumbnail, published, category } = Astro.props.frontmatter as Props || Astro.props as Props
 ---
 
 <!DOCTYPE html>
@@ -30,11 +32,16 @@ const { title, author, thumbnail } = Astro.props.frontmatter as Props || Astro.p
 </head>
 <body>
   <Navbar />
-  <PostHeader thumbnail={thumbnail} author={author} />
+  <PostHeader 
+    title={title} 
+    thumbnail={thumbnail} 
+    author={author}
+    published={published}
+    category={category} />
 
   <!-- Markdown slot -->
   <div class="xl:container mx-auto px-8 flex justify-center items-center">
-    <div class="w-3/5 slot">
+    <div class="md:w-4/5 lg:w-3/5 slot">
       <slot/>
     </div>
   </div>
@@ -58,13 +65,19 @@ const { title, author, thumbnail } = Astro.props.frontmatter as Props || Astro.p
     }
 
     .slot > h1 {
-      font-size: 30px;
+      font-size: 24px;
       margin-bottom: 30px;
     }
 
     .slot > p {
       margin-bottom: 1rem;
     }
-  </style>
+
+    @media screen and (min-width: 640px) {
+      .slot > h1 {
+        font-size: 30px;
+      }
+    }
+</style>
 </body>
 </html>
