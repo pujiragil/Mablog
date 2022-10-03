@@ -1,10 +1,10 @@
 ---
-const { thumbnail, published, category } = Astro.props
+const { thumbnail, published, category, unShow, primary } = Astro.props
 ---
 
-<div class="space-y-5 mb-2.5">
+<div class={`${primary && "md:col-span-1 lg:col-span-2"} space-y-5 mb-2.5`}>
   <div class="overflow-hidden rounded-xl">
-    <img class="h-44 md:h-[235px] w-full object-cover hover:scale-110 duration-300 ease-in-out" src={thumbnail} alt="thumbnail" />
+    <img class={`${primary && "md:h-[280px] lg:h-[320px]" } md:h-[235px] h-44 w-full object-cover hover:scale-110 duration-300 ease-in-out`} src={thumbnail} alt="thumbnail" />
   </div>
-  <p class="opacity-60 flex items-center gap-x-3">{category} <span class="w-1.5 h-1.5 bg-white rounded-full"></span> {published}</p>
+  {!unShow && <p class="opacity-60 flex items-center gap-x-3">{category} <span class="w-1.5 h-1.5 bg-white rounded-full"></span> {published}</p>}
 </div>

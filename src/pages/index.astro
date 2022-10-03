@@ -1,24 +1,41 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Navbar from "../components/Navbar.astro"
-import Card from "../components/Card.astro"
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Card from "../components/Card.astro";
+import MainCard from "../components/MainCard.astro";
 
-const posts = await Astro.glob("../posts/*.md")
+const posts = await Astro.glob("../posts/*.md");
 ---
 
 <Layout title="Mablog">
 	<Navbar />
 
 	<div class="xl:container mx-auto px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-9">
-		{posts.map(post => (
-			<Card 
-				slug={post.frontmatter.slug}
-				title={post.frontmatter.title}
-				description={post.frontmatter.description}
-				thumbnail={post.frontmatter.thumbnail}
-				author={post.frontmatter.author}
-				published={post.frontmatter.published}
-				category={post.frontmatter.category}/>
-		))}
+		<MainCard
+			slug={posts[0].frontmatter.slug}
+			title={posts[0].frontmatter.title}
+			description={posts[0].frontmatter.description}
+			thumbnail={posts[0].frontmatter.thumbnail}
+			author={posts[0].frontmatter.author}
+			published={posts[0].frontmatter.published}
+			category={posts[0].frontmatter.category}/>
+			
+		{
+			posts.map((post, index) => {
+				if (index > 0) {
+					return (
+						<Card
+							slug={post.frontmatter.slug}
+							title={post.frontmatter.title}
+							description={post.frontmatter.description}
+							thumbnail={post.frontmatter.thumbnail}
+							author={post.frontmatter.author}
+							published={post.frontmatter.published}
+							category={post.frontmatter.category}
+						/>
+					)
+				}
+			})
+		}
 	</div>
 </Layout>
