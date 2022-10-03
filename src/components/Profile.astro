@@ -1,0 +1,18 @@
+---
+export interface Props {
+  imageProfile: string;
+  name: string;
+  specialist: string;
+}
+
+const { imageProfile, name, specialist } = Astro.props as Props
+---
+
+<div class="flex items-center space-x-4">
+  <img class="w-[50px] h-[50px]" src={imageProfile} alt={name} />
+
+  <div>
+    <p>{name}</p>
+    <p class="text-sm opacity-60">{specialist}</p>
+  </div>
+</div>
