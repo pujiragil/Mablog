@@ -6,6 +6,7 @@ author: {
   name: Siskaee,
   specialist: UI Designer
 }
+thumbnail: /images/thumbnail-1.png
 ---
 
 # Understanding color theory: the color wheel and finding complementary colors

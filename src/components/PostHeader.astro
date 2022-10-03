@@ -1,14 +1,25 @@
 ---
 import Profile from "./Profile.astro"
 
-const { author } = Astro.props
+export interface Props {
+  author: {
+    imageProfile: string;
+    name: string;
+    specialist: string;
+  };
+  thumbnail: string;
+}
+
+const { author, thumbnail } = Astro.props as Props
 ---
 
-<div class="xl:container mx-auto p-8">
+<div class="xl:container mx-auto px-8 pb-8">
   <div class="flex flex-col justify-center items-center text-center">
     <p class="flex items-center gap-x-3 opacity-60">UI Design <span class="w-1.5 h-1.5 rounded-full bg-white"></span> July 2, 2022</p>
     <h1 class="mt-2.5 mb-8 text-2xl">Understanding color theory: the color wheel and finding complementary colors</h1>
 
     <Profile imageProfile={author.imageProfile} name={author.name} specialist={author.specialist} />
+
+    <img class="mt-8 w-9/12 h-auto object-cover" src={thumbnail} alt="thumbnail">
   </div>
 </div>

@@ -1,8 +1,19 @@
 ---
 import PostHeader from "../components/PostHeader.astro"
 import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
 
-const { title, author } = Astro.props.frontmatter || Astro.props
+export interface Props {
+  title: string;
+  author: {
+    imageProfile: string;
+    name: string;
+    specialist: string;
+  };
+  thumbnail: string;
+}
+
+const { title, author, thumbnail } = Astro.props.frontmatter as Props || Astro.props as Props
 ---
 
 <!DOCTYPE html>
@@ -19,9 +30,17 @@ const { title, author } = Astro.props.frontmatter || Astro.props
 </head>
 <body>
   <Navbar />
-  <PostHeader author={author} />
+  <PostHeader thumbnail={thumbnail} author={author} />
 
-  <slot/>
+  <!-- Markdown slot -->
+  <div class="xl:container mx-auto px-8 flex justify-center items-center">
+    <div class="w-3/5 slot">
+      <slot/>
+    </div>
+  </div>
+  
+  <Footer />
+
   <style is:global>
     * {
       font-family: "Patrick Hand", cursive;
@@ -36,6 +55,15 @@ const { title, author } = Astro.props.frontmatter || Astro.props
       background-position: 0;
       min-height: 100vh;
       background-repeat: no-repeat;
+    }
+
+    .slot > h1 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .slot > p {
+      margin-bottom: 1rem;
     }
   </style>
 </body>
