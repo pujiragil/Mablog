@@ -1,0 +1,40 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [
+    { params: { category: "ui-design" }, props: { title: "UI Design" } },
+    { params: { category: "frontend" }, props: { title: "Frontend" } },
+    { params: { category: "backend" }, props: { title: "Backend" } },
+  ];
+}
+
+const { category } = Astro.params;
+const { title } = Astro.props;
+const posts = await Astro.glob("../posts/*.md");
+const categories = posts.filter(
+  (post) => post.frontmatter.category.toLowerCase() === category
+);
+---
+
+<Layout title={`Mablog - ${title}`}>
+  <div class="xl:container mx-auto p-8 space-y-16">
+    <h1 class="text-4xl text-center">{title}</h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-9">
+      {
+        categories.map((category) => (
+          <Card
+            slug={category.frontmatter.slug}
+            title={category.frontmatter.title}
+            description={category.frontmatter.description}
+            thumbnail={category.frontmatter.thumbnail}
+            author={category.frontmatter.author}
+            published={category.frontmatter.published}
+            category={category.frontmatter.category}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Layout>

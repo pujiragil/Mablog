@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
 import Card from "../components/Card.astro";
 import MainCard from "../components/MainCard.astro";
 
@@ -8,8 +7,6 @@ const posts = await Astro.glob("../posts/*.md");
 ---
 
 <Layout title="Mablog">
-	<Navbar />
-
 	<div class="xl:container mx-auto px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-9">
 		<MainCard
 			slug={posts[0].frontmatter.slug}

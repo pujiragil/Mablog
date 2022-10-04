@@ -4,7 +4,7 @@ title: Bang Mengkoding Itu Apa ?
 description: Bang ajarin aku biar jago mengkoding. Aku pengen bisa mengkoding biar jadi hemker yang gegeh. Bang tutor pulstek bang, bang pengen bisa re-ek je-es biar bisa jadi wengdev wangi-wangi
 thumbnail: /images/thumbnail-7.png
 published: October 3, 2022
-category: Weng-dev
+category: UI-Design
 author: {
   imageProfile: /images/profile-5.png,
   name: Owi Odo,

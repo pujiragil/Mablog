@@ -4,7 +4,7 @@ title: Email Love - Email Inspiration, Templates and Discovery
 description: 'Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.'
 published: August 12, 2022
 thumbnail: /images/thumbnail-4.png
-category: INSPIRATIONS
+category: Frontend
 author: {
   imageProfile: /images/profile-4.png,
   name: Robertos,

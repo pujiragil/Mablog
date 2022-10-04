@@ -4,7 +4,7 @@ title: The More Important the Work, the More Important the Rest
 description: Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high.
 published: June 11, 2022
 thumbnail: /images/thumbnail-3.png
-category: 9 TO 5
+category: Frontend
 author: {
   imageProfile: /images/profile-3.png,
   name: John Doe,

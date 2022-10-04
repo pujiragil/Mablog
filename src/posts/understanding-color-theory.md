@@ -4,7 +4,7 @@ title: 'Understanding color theory: the color wheel and finding complementary co
 description: Male sixth sea it a. Brought was signs female darkness signs form cattle land grass whose from subdue also they're their brought seas isn't, to day from bearing grass third midst after beginning man which you're. Dry, gathering beginning given made them evening.
 published: October 12, 2022
 thumbnail: /images/thumbnail-1.png
-category: UI Desginer
+category: UI-Design
 author: {
   imageProfile: /images/profile-1.png,
   name: Siskaee,

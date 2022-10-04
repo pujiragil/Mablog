@@ -2,7 +2,7 @@
 slug: how-to-design-a-product
 title: 'How to design a product that can grow itself 10x in year'
 description: Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.
-category: INTERNET
+category: Backend
 published: September 2, 2022
 thumbnail: /images/thumbnail-2.png
 author: {
