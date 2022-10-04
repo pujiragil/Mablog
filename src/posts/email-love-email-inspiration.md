@@ -3,10 +3,10 @@ slug: email-love-email-inspiration-templates-and-discovery
 title: Email Love - Email Inspiration, Templates and Discovery
 description: 'Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.'
 published: August 12, 2022
-thumbnail: /images/thumbnail-4.png
+thumbnail: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/thumbnail-4.png
 category: Frontend
 author: {
-  imageProfile: /images/profile-4.png,
+  imageProfile: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/profile-4.png,
   name: Robertos,
   specialist: Front-end Engineer
 }

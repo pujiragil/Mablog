@@ -2,11 +2,11 @@
 slug: apa-itu-mengkoding
 title: Bang Mengkoding Itu Apa ?
 description: Bang ajarin aku biar jago mengkoding. Aku pengen bisa mengkoding biar jadi hemker yang gegeh. Bang tutor pulstek bang, bang pengen bisa re-ek je-es biar bisa jadi wengdev wangi-wangi
-thumbnail: ../../images/thumbnail-7.png
+thumbnail: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/thumbnail-7.png
 published: October 3, 2022
 category: UI-Design
 author: {
-  imageProfile: /images/profile-5.png,
+  imageProfile: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/profile-5.png,
   name: Owi Odo,
   specialist: Pembanteng Handal
 }

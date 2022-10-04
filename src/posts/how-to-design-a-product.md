@@ -4,9 +4,9 @@ title: 'How to design a product that can grow itself 10x in year'
 description: Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.
 category: Backend
 published: September 2, 2022
-thumbnail: /images/thumbnail-2.png
+thumbnail: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/thumbnail-2.png
 author: {
-  imageProfile: /images/profile-2.png,
+  imageProfile: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/profile-2.png,
   name: Mama Mia,
   specialist: Product Designer
 }

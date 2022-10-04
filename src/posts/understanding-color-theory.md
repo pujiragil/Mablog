@@ -3,10 +3,10 @@ slug: understanding-color-theory
 title: 'Understanding color theory: the color wheel and finding complementary colors'
 description: Male sixth sea it a. Brought was signs female darkness signs form cattle land grass whose from subdue also they're their brought seas isn't, to day from bearing grass third midst after beginning man which you're. Dry, gathering beginning given made them evening.
 published: October 12, 2022
-thumbnail: /images/thumbnail-1.png
+thumbnail: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/thumbnail-1.png
 category: UI-Design
 author: {
-  imageProfile: /images/profile-1.png,
+  imageProfile: https://raw.githubusercontent.com/pujiragil/Mablog/master/src/images/profile-1.png,
   name: Siskaee,
   specialist: UI Designer
 }
